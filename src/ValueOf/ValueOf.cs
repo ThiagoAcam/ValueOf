@@ -6,7 +6,7 @@ namespace ValueOfLib
     public abstract class ValueOf<TValue, TThis> where TThis : ValueOf<TValue, TThis>, IEquatable<ValueOf<TValue, TThis>>
     {
         private TValue _value;
-        public TValue Value => _value;
+        protected TValue Value => _value;
 
         protected ValueOf(TValue value)
         {
@@ -16,6 +16,8 @@ namespace ValueOfLib
 
         protected abstract void Validate();
 
+        protected abstract bool Equals(ValueOf<TValue, TThis> obj);
+
         public override bool Equals(object obj)
         {
             var valueOf = obj as ValueOf<TValue, TThis>;
@@ -23,17 +25,6 @@ namespace ValueOfLib
                 return false;
 
             return Equals(valueOf);
-        }
-
-        public bool Equals(ValueOf<TValue, TThis> obj)
-        {
-            if (obj is null)
-                return false;
-
-            if (ReferenceEquals(this, obj))
-                return true;
-
-            return obj.GetType() == GetType() && Equals(obj);
         }
 
         public override int GetHashCode()
