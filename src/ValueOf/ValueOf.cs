@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace ValueOfLib
 {
-    public abstract class ValueOf<TValue, TThis> where TThis : ValueOf<TValue, TThis>, IEquatable<ValueOf<TValue, TThis>>
+    public abstract class ValueOf<TValue, TThis> where TThis : ValueOf<TValue, TThis>
     {
         private TValue _value;
-        protected TValue Value => _value;
+        public TValue Value => _value;
 
         protected ValueOf(TValue value)
         {
@@ -16,11 +16,11 @@ namespace ValueOfLib
 
         protected abstract void Validate();
 
-        protected abstract bool Equals(ValueOf<TValue, TThis> obj);
+        protected abstract bool Equals(TThis obj);
 
         public override bool Equals(object obj)
         {
-            var valueOf = obj as ValueOf<TValue, TThis>;
+            var valueOf = obj as TThis;
             if (valueOf == null)
                 return false;
 
