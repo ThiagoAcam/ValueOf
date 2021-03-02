@@ -34,5 +34,16 @@ namespace ValueOf.Tests
             Assert.Equal("11111111111", cpf.Value);
         }
 
+        [Fact]
+        public void Cpf_Instanciar2CpfsValidos_VerificarIgualdade_DeveSerTrue()
+        {
+            //Arrange & Act
+            var cpf1 = new Cpf("111.111.111-11");
+            var cpf2 = new Cpf("111.111.111-11");
+
+            //Assert
+            Assert.True(cpf1 == cpf2);
+        }
+
     }
 }

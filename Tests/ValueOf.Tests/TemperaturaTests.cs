@@ -30,5 +30,16 @@ namespace ValueOf.Tests
             Assert.Equal(32, temperatura.Value.Fahrenheit);
         }
 
+        [Fact]
+        public void Temperatura_Instanciar2TemperaturasValidas_VerificarIgualdade_DeveSerTrue()
+        {
+            //Arrange & Act
+            var temperatura1 = new Temperatura(30);
+            var temperatura2 = new Temperatura(30);
+
+            //Assert
+            Assert.True(temperatura1.Equals(temperatura2));
+        }
+
     }
 }

@@ -24,7 +24,7 @@ namespace ValueOfLib
             if (valueOf == null)
                 return false;
 
-            return Equals(valueOf);
+            return ReferenceEquals(this, obj) || Equals(valueOf);
         }
 
         public override int GetHashCode()

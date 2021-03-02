@@ -17,7 +17,7 @@ namespace ValueOf.Demo
             => string.Join("", cpf.Where(c => char.IsDigit(c)).Select(c => c));
 
         protected override bool Equals(Cpf obj)
-            => Value == obj;
+            => Value == obj.Value;
 
         protected override void Validate()
         {
