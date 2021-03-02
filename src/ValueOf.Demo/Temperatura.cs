@@ -4,18 +4,14 @@ using ValueOfLib;
 
 namespace ValueOf.Demo
 {
-    public class Temperatura:ValueOf<Tuple<double, double, double>, Temperatura>
+    public class Temperatura:ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>
     {
-        public double Celsius => Value.Item1;
-        public double kelvin => Value.Item2;
-        public double Fahrenheit => Value.Item3;
-
         public Temperatura(double celsius)
-            :base(new Tuple<double, double, double>(celsius, celsius + 273.15, celsius * 1.8 + 32))
+            :base((celsius, celsius + 273.15, celsius * 1.8 + 32))
         { }
 
         protected override bool Equals(Temperatura obj)
-            => Value.Item1 == obj.Celsius;
+            => Value.Celsius == obj.Value.Celsius;
 
         protected override void Validate()
         {

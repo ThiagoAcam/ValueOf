@@ -10,10 +10,10 @@ namespace ValueOf.Demo
         static int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public Cpf(string cpf)
-            : base(Cpf.LimparCpf(cpf))
+            : base(Cpf.RemoverNaoNumericos(cpf))
         { }
 
-        private static string LimparCpf(string cpf)
+        private static string RemoverNaoNumericos(string cpf)
             => string.Join("", cpf.Where(c => char.IsDigit(c)).Select(c => c));
 
         protected override bool Equals(Cpf obj)

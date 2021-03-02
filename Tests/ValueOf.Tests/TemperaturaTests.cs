@@ -24,10 +24,10 @@ namespace ValueOf.Tests
 
             //Assert
             Assert.IsType<Temperatura>(temperatura);
-            Assert.IsAssignableFrom<ValueOf<Tuple<double, double, double>, Temperatura>>(temperatura);
-            Assert.Equal(0, temperatura.Celsius);
-            Assert.Equal(273.15, temperatura.kelvin);
-            Assert.Equal(32, temperatura.Fahrenheit);
+            Assert.IsAssignableFrom<ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>>(temperatura);
+            Assert.Equal(0, temperatura.Value.Celsius);
+            Assert.Equal(273.15, temperatura.Value.kelvin);
+            Assert.Equal(32, temperatura.Value.Fahrenheit);
         }
 
     }
