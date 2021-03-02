@@ -15,7 +15,7 @@ namespace ValueOf.Demo
 
         protected override void Validate()
         {
-            if(Value.Item1 < -273.15)
+            if(Value.Celsius < -273.15)
                 throw new CelsiusMinimoExcedidoException();
         }
     }
