@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOfLib", "src\ValueOf\V
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Tests", "Tests\ValueOf.Tests\ValueOf.Tests.csproj", "{D72008B1-9F5D-4E4E-9FBE-0E51CD3EDF4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOf.Demo", "src\ValueOf.Demo\ValueOf.Demo.csproj", "{92965281-0923-4F29-8B12-9618B253BF47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Demo", "src\ValueOf.Demo\ValueOf.Demo.csproj", "{92965281-0923-4F29-8B12-9618B253BF47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

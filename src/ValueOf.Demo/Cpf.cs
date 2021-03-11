@@ -1,25 +1,22 @@
-﻿using System.Linq;
-using ValueOf.Demo.Exceptions;
+﻿using ValueOf.Demo.Exceptions;
+using ValueOf.Demo.Extensions;
 using ValueOfLib;
 
 namespace ValueOf.Demo
 {
-    public class Cpf : ValueOf<string, Cpf>
+    public class Cpf : ValueOfBase<string, Cpf>
     {
         static int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         static int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public Cpf(string cpf)
-            : base(Cpf.RemoverNaoNumericos(cpf))
+            : base(cpf.OnlyNumbers())
         { }
-
-        private static string RemoverNaoNumericos(string cpf)
-            => string.Join("", cpf.Where(c => char.IsDigit(c)).Select(c => c));
 
         protected override bool Equals(Cpf obj)
             => Value == obj.Value;
 
-        protected override void Validate()
+        protected override bool Validate()
         {
             string tempCpf;
             string digito;
@@ -61,6 +58,8 @@ namespace ValueOf.Demo
 
             if (!Value.EndsWith(digito))
                 throw new CpfInvalidoException();
+
+            return true;
         }
     }
 }

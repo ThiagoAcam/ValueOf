@@ -24,7 +24,7 @@ namespace ValueOf.Tests
 
             //Assert
             Assert.IsType<Temperatura>(temperatura);
-            Assert.IsAssignableFrom<ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>>(temperatura);
+            Assert.IsAssignableFrom<ValueOfBase<(double Celsius, double kelvin, double Fahrenheit), Temperatura>>(temperatura);
             Assert.Equal(0, temperatura.Value.Celsius);
             Assert.Equal(273.15, temperatura.Value.kelvin);
             Assert.Equal(32, temperatura.Value.Fahrenheit);
