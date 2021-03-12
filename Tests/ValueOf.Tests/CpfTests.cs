@@ -30,7 +30,7 @@ namespace ValueOf.Tests
             
             //Assert
             Assert.IsType<Cpf>(cpf);
-            Assert.IsAssignableFrom<ValueOfBase<string, Cpf>>(cpf);
+            Assert.IsAssignableFrom<ValueOf<string, Cpf>>(cpf);
             Assert.Equal("11111111111", cpf.Value);
         }
 

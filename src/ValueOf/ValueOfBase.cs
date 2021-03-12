@@ -7,21 +7,21 @@ namespace ValueOfLib
     {
         #region Fields
 
-        private ValueModel<TValue> _value;
+        private TValue _value;
 
         #endregion
 
         #region Properties
 
-        public bool IsValid => _value.IsValid;
+        public readonly bool IsValid = true;
         public TValue Value
         {
             get
             {
-                if (!_value.IsValid)
+                if (!IsValid)
                     throw new ValueObjectInvalidException();
 
-                return _value.Value;
+                return Value;
             }
         }
 
@@ -29,8 +29,8 @@ namespace ValueOfLib
 
         protected ValueOfBase(TValue value)
         {
-            _value = new ValueModel<TValue>(value);
-            _value.IsValid = Validate();
+            _value = value;
+            IsValid = Validate();
         }
 
         protected abstract bool Validate();

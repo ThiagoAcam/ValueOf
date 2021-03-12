@@ -23,7 +23,7 @@ namespace ValueOf.Tests
 
             //Assert
             Assert.IsType<Cep>(cep);
-            Assert.IsAssignableFrom<ValueOfBase<string, Cep>>(cep);
+            Assert.IsAssignableFrom<ValueOf<string, Cep>>(cep);
             Assert.Equal("12345678", cep.Value);
         }
 

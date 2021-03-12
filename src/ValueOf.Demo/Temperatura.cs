@@ -4,7 +4,7 @@ using ValueOfLib;
 
 namespace ValueOf.Demo
 {
-    public class Temperatura:ValueOfBase<(double Celsius, double kelvin, double Fahrenheit), Temperatura>
+    public class Temperatura:ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>
     {
         public Temperatura(double celsius)
             :base((celsius, celsius + 273.15, celsius * 1.8 + 32))
