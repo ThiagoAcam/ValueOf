@@ -1,8 +1,7 @@
-﻿using System;
-using ValueOf.Demo.Exceptions;
+﻿using ValueOf.Demo.Exceptions;
 using ValueOfLib;
 
-namespace ValueOf.Demo
+namespace ValueOf.Demo.ValueObjects
 {
     public class Temperatura:ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>
     {

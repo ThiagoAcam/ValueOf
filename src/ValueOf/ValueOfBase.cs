@@ -21,7 +21,7 @@ namespace ValueOfLib
                 if (!IsValid)
                     throw new ValueObjectInvalidException();
 
-                return Value;
+                return _value;
             }
         }
 

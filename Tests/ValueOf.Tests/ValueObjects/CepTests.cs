@@ -1,9 +1,9 @@
 ﻿using Xunit;
 using ValueOfLib;
-using ValueOf.Demo;
 using ValueOfLib.Exceptions;
+using ValueOf.Demo.ValueObjects;
 
-namespace ValueOf.Tests
+namespace ValueOf.Tests.ValueObjects
 {
     public class CepTests
     {
@@ -11,8 +11,12 @@ namespace ValueOf.Tests
         [Fact]
         public void Cep_InstanciarCepInvalido_Retornar_ValueObjectInvalidException()
         {
-            //Arrange & Act & Assert
-            Assert.Throws<ValueObjectInvalidException>(() => new Cep("23--!000"));
+            //Arrange & Act
+            var cep = new Cep("23--!000");
+
+            //Assert
+            Assert.False(cep.IsValid);
+            Assert.Throws<ValueObjectInvalidException>(() => cep.Value);
         }
 
         [Fact]

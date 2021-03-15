@@ -1,19 +1,23 @@
-﻿using Xunit;
-using ValueOfLib;
-using ValueOf.Demo;
-using ValueOf.Demo.Exceptions;
-using System;
+﻿using System.Linq;
+using ValueOf.Demo.ValueObjectsWithFluentValidation;
+using ValueOfLib.Exceptions;
+using ValueOfLib.FluentValidation;
+using Xunit;
 
-namespace ValueOf.Tests
+namespace ValueOf.Tests.ValueObjectsWithFluentValidation
 {
     public class TemperaturaTests
     {
-
         [Fact]
-        public void Temperatura_InstanciarTemperaturaInvalido_Retornar_CelsiusMinimoExcedidoException()
+        public void Temperatura_InstanciarTemperaturaInvalido_Retornar_UmObjetoInvalido()
         {
-            //Arrange & Act & Assert
-            Assert.Throws<CelsiusMinimoExcedidoException>(() => new Temperatura(-500));
+            //Arrange & Act
+            var temperatura = new Temperatura(-500);
+
+            //Assert
+            Assert.False(temperatura.IsValid);
+            Assert.Equal("A temperatura mínima para celsius é -273.15", temperatura.ValidationResult.Errors.FirstOrDefault().ErrorMessage);
+            Assert.Throws<ValueObjectInvalidException>(() => temperatura.Value);
         }
 
         [Fact]
@@ -24,7 +28,7 @@ namespace ValueOf.Tests
 
             //Assert
             Assert.IsType<Temperatura>(temperatura);
-            Assert.IsAssignableFrom<ValueOf<(double Celsius, double kelvin, double Fahrenheit), Temperatura>>(temperatura);
+            Assert.IsAssignableFrom<ValueOfWithFluentValidation.WithNotifications<(double Celsius, double kelvin, double Fahrenheit), Temperatura, TemperaturaValidator>>(temperatura);
             Assert.Equal(0, temperatura.Value.Celsius);
             Assert.Equal(273.15, temperatura.Value.kelvin);
             Assert.Equal(32, temperatura.Value.Fahrenheit);
@@ -40,6 +44,5 @@ namespace ValueOf.Tests
             //Assert
             Assert.True(temperatura1.Equals(temperatura2));
         }
-
     }
 }

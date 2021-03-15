@@ -2,7 +2,7 @@
 using ValueOf.Demo.Extensions;
 using ValueOfLib;
 
-namespace ValueOf.Demo
+namespace ValueOf.Demo.ValueObjects
 {
     public class Cpf : ValueOf<string, Cpf>
     {

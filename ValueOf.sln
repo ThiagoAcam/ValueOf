@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Tests", "Tests\Valu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Demo", "src\ValueOf.Demo\ValueOf.Demo.csproj", "{92965281-0923-4F29-8B12-9618B253BF47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfLib.FluentValidation", "src\ValueOfLib.FluentValidation\ValueOfLib.FluentValidation.csproj", "{28A93B1A-224A-4792-83A7-ADB612AEE860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{92965281-0923-4F29-8B12-9618B253BF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92965281-0923-4F29-8B12-9618B253BF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92965281-0923-4F29-8B12-9618B253BF47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A93B1A-224A-4792-83A7-ADB612AEE860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A93B1A-224A-4792-83A7-ADB612AEE860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A93B1A-224A-4792-83A7-ADB612AEE860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A93B1A-224A-4792-83A7-ADB612AEE860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

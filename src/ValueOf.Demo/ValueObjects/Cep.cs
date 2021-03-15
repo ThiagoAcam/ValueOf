@@ -1,7 +1,7 @@
 ﻿using ValueOf.Demo.Extensions;
 using ValueOfLib;
 
-namespace ValueOf.Demo
+namespace ValueOf.Demo.ValueObjects
 {
     public class Cep : ValueOf<string, Cep>
     {

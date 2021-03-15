@@ -7,9 +7,6 @@ namespace ValueOfLib
 
         protected ValueOf(TValue value)
             :base(value)
-        {
-            if (!IsValid)
-                throw new ValueObjectInvalidException();
-        }
+        { }
     }
 }

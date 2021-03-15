@@ -1,9 +1,9 @@
 ﻿using Xunit;
 using ValueOfLib;
-using ValueOf.Demo;
 using ValueOf.Demo.Exceptions;
+using ValueOf.Demo.ValueObjects;
 
-namespace ValueOf.Tests
+namespace ValueOf.Tests.ValueObjects
 {
     public class CpfTests
     {
