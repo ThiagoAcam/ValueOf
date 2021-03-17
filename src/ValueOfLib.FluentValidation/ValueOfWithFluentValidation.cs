@@ -23,9 +23,19 @@ namespace ValueOfLib.FluentValidation
             }
         }
 
-        public abstract class WithExceptions
+        public abstract class WithExceptions<TValue, TThis, TValidator> : ValueOfBase<TValue, TThis>
+                                                                          where TThis : ValueOfBase<TValue, TThis>
+                                                                          where TValidator : AbstractValidator<TThis>, new()
         {
+            public WithExceptions(TValue value)
+                : base(value)
+            { }
 
+            protected override sealed bool Validate()
+            {
+                new TValidator().ValidateAndThrow(this as TThis);
+                return true;
+            }
         }
 
     }
