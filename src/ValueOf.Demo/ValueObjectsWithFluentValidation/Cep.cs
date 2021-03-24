@@ -19,7 +19,7 @@ namespace ValueOf.Demo.ValueObjectsWithFluentValidation
         public CepValidator()
         {
             RuleFor(p => p.Value)
-                .Matches(@"^[0-9]{5}\s?[0-9]{3}")
+                .Matches(@"^[0-9]{5}\s?[0-9]{3}$")
                 .WithMessage("CEP inválido");
         }
     }
