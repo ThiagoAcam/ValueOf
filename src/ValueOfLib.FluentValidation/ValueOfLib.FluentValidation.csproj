@@ -5,7 +5,7 @@
 
     
     <PackageId>ValueOfLib.FluentValidation</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <License>MIT</License>
     <Authors>Thiago Campos de Oliveira e Ricardo Augusto Vicentini</Authors>
     <PackageDescription>This package is to create Value Objects standardized and validate him with Fluent Validation</PackageDescription>
