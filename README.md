@@ -39,7 +39,8 @@ Este projeto serve para padronizar a criação de Value Objects do DDD e usar o 
 
 
 ### Dependências
-.NET Standard 2.0
+FluentValidation (>= 9.5.3)
+ValueOfLib (>= 1.0.2)
 
 Você pode visualizar a compatibilidade com frameworks aqui:
 https://docs.microsoft.com/pt-br/dotnet/standard/net-standard
