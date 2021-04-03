@@ -29,6 +29,3 @@ jobs:
 
     - name: Publish ValueOf
       run: dotnet nuget push "src/ValueOf/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
-
-    - name: Publish ValueOf
-      run: dotnet nuget push "src/ValueOfLib.FluentValidation/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN_FLUENT_VALIDATION }} -s https://api.nuget.org/v3/index.json
