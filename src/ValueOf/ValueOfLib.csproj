@@ -1,7 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <PackageId>ValueOfLib</PackageId>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Thiago Campos de Oliveira e Ricardo Augusto Vicentini</Authors>
+    <PackageDescription>This package is to create Value Objects standardized</PackageDescription>
+    <Description>This package is to create Value Objects standardized</Description>
+    <RepositoryUrl>https://github.com/ThiagoAcam/ValueOf</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ThiagoAcam/ValueOf</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Domain;DDD;ValueObject;ValueOf</PackageTags>
+    <Title>ValueOf</Title>
+    <Summary>This package is to create Value Objects standardized. Just inherit from ValueOf abstratic class to create your Value Objects, or inherit from ValueOfBase to create your structs to standart yours ValueObjects.</Summary>
   </PropertyGroup>
 
 </Project>
