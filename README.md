@@ -26,7 +26,7 @@ Install-Package ValueOfLib
 dotnet add package ValueOfLib
 ```
 
-## Como usar
+### Como usar
 Acesse [Wiki](https://github.com/ThiagoAcam/ValueOf/wiki/ValueOf) para mais informações em relação ao ValueOf
 
 # ValueOf.FluentValidation
@@ -57,5 +57,5 @@ Install-Package ValueOfLib.FluentValidation
 dotnet add package ValueOfLib.FluentValidation
 ```
 
-## Como usar
+### Como usar
 Acesse [Wiki](https://github.com/ThiagoAcam/ValueOf/wiki/ValueOf.FluentValidation) para mais informações em relação ao ValueOf
