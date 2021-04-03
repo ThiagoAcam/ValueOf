@@ -1,0 +1,34 @@
+  
+name: Build and deploy package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@main
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'    
+
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+
+    - name: Test
+      run: dotnet test
+
+    - name: Create the Package
+      run: dotnet pack --configuration Release
+
+    - name: Publish ValueOf
+      run: dotnet nuget push "./src/ValueOf/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
+
+    - name: Publish ValueOf
+      run: dotnet nuget push "./src/ValueOfLib.FluentValidation/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN_FLUENT_VALIDATION }} -s https://api.nuget.org/v3/index.json
