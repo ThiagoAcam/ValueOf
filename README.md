@@ -8,7 +8,9 @@ Este projeto serve para padronizar a criação de Value Objects do DDD.
 
 
 ### Dependências
+```
 .NET Standard 2.0
+```
 
 Você pode visualizar a compatibilidade com frameworks aqui:
 https://docs.microsoft.com/pt-br/dotnet/standard/net-standard
