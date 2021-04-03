@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <PackageId>ValueOfLib</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <License>MIT</License>
     <Authors>Thiago Campos de Oliveira e Ricardo Augusto Vicentini</Authors>
     <PackageDescription>This package is to create Value Objects standardized</PackageDescription>
