@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOfLib", "src\ValueOf\ValueOfLib.csproj", "{2AADA4EC-6BFD-4C06-B787-36232A433478}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Tests", "Tests\ValueOf.Tests\ValueOf.Tests.csproj", "{D72008B1-9F5D-4E4E-9FBE-0E51CD3EDF4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Tests", "sample\ValueOf.Tests\ValueOf.Tests.csproj", "{D72008B1-9F5D-4E4E-9FBE-0E51CD3EDF4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Demo", "src\ValueOf.Demo\ValueOf.Demo.csproj", "{92965281-0923-4F29-8B12-9618B253BF47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueOf.Demo", "sample\ValueOf.Demo\ValueOf.Demo.csproj", "{92965281-0923-4F29-8B12-9618B253BF47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfLib.FluentValidation", "src\ValueOfLib.FluentValidation\ValueOfLib.FluentValidation.csproj", "{28A93B1A-224A-4792-83A7-ADB612AEE860}"
 EndProject

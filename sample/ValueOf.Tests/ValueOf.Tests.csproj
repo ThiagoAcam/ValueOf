@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ValueOf.Demo\ValueOf.Demo.csproj" />
     <ProjectReference Include="..\..\src\ValueOfLib.FluentValidation\ValueOfLib.FluentValidation.csproj" />
     <ProjectReference Include="..\..\src\ValueOf\ValueOfLib.csproj" />
+    <ProjectReference Include="..\ValueOf.Demo\ValueOf.Demo.csproj" />
   </ItemGroup>
 
 </Project>
