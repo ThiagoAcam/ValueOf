@@ -33,5 +33,5 @@ jobs:
 #    - name: Publish ValueOf with Fluent Validation
 #      run: dotnet nuget push "src/ValueOfLib.FluentValidation/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN_FLUENT_VALIDATION }} -s https://api.nuget.org/v3/index.json
       
-    - name: Publish ValueOf with Flunt
-      run: dotnet nuget push "src/ValueOfLib.Flunt/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN_FLUNT }} -s https://api.nuget.org/v3/index.json
+#   - name: Publish ValueOf with Flunt
+#     run: dotnet nuget push "src/ValueOfLib.Flunt/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN_FLUNT }} -s https://api.nuget.org/v3/index.json
