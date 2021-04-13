@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <PackageId>ValueOfLib.Flunt</PackageId>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Thiago Campos de Oliveira e Ricardo Augusto Vicentini</Authors>
+    <PackageDescription>This package is to create Value Objects standardized and validate him with Flunt</PackageDescription>
+    <Description>This package is to create Value Objects standardized and validate him with Flunt</Description>
+    <RepositoryUrl>https://github.com/ThiagoAcam/ValueOf</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ThiagoAcam/ValueOf</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Domain;DDD;ValueObject;ValueOf;Flunt</PackageTags>
+    <Title>ValueOf with Flunt</Title>
+    <Summary>This package is to create Value Objects standardized and validate him with Flunt.</Summary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ValueOf\ValueOfLib.csproj" />
+  </ItemGroup>
+
+</Project>

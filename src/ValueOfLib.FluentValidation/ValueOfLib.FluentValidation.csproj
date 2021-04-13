@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-
     
     <PackageId>ValueOfLib.FluentValidation</PackageId>
     <Version>1.0.2</Version>

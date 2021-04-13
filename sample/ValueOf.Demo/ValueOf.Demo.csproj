@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\ValueOfLib.FluentValidation\ValueOfLib.FluentValidation.csproj" />
+    <ProjectReference Include="..\..\src\ValueOfLib.Flunt\ValueOfLib.Flunt.csproj" />
     <ProjectReference Include="..\..\src\ValueOf\ValueOfLib.csproj" />
   </ItemGroup>
 
